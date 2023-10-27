@@ -1,22 +1,50 @@
+.container {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(250, 170, 66);
+    border-radius: 15px;
+    box-shadow: 3px 8px 10px black;
+}
 
 
-button {
+.inputContainer {
+    display:grid;
+    margin: 0 auto;
+    background-color: rgb(250, 170, 66);
+    border-radius: 15px;
+    box-shadow: 3px 8px 10px black;
+}
+
+.inputContainer2 {
+    display:grid;
+    text-decoration: underline;
+    margin: 0 auto;
+    background-color: rgb(85, 193, 255);
+    box-shadow: 3px 8px 10px black;
+}
+
+#clickRate1 {
     background-image: url('./Images/donut.png');
+    background-color: rgba(240, 248, 255, 0);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-size: 105%;
+    object-fit: contain;
+    border:double
+}
+
+#onClick {
+    background-image: url('./Images/donut.png');
     background-color: rgba(240, 248, 255, 0);
     height: 290px;
     width: 290px;
     border: none;
     border-radius: 2000px;
-    ;
   }
 
-  button:hover{
+  #onClick:hover{
     background-image: url('./Images/donutclicked.png');
     cursor: pointer;
   }
   
-  onClick span {
-    display: none;
-  }
