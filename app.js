@@ -1,5 +1,5 @@
 const counter = document.getElementById("counter")
-
+const leftClick = document.getElementById('onClick')
 let startCount = 0;
 let autoClicker = 1;
 let click = 1;
@@ -22,6 +22,12 @@ setInterval(function (){
     autoCount()
     startCount = startCount + autoClicker
 }, 1000)
+
+function addClick(){
+    startCount = click + startCount
+}
+
+leftClick.addEventListener('click', addClick);
 
 // if (x > 50) {
 //     /* do something */
