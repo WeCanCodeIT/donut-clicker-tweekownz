@@ -1,45 +1,75 @@
+header {
+  overflow: hidden;
+}
+
+header h1 {
+  float: center;
+  color: black;
+  text-align: center;
+  }
+
+  header a {
+    float: right;
+    color: black;
+    text-align: center;
+    }
+
+    header p {
+      float: center;
+      color: black;
+      font-style: italic;
+      text-align: center;
+      }
 
 body {
-  margin: 0;
-  background-color: #123;
+  background-color: rgb(59, 109, 158);
 }
 
-.container {
-    display: flex;
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgb(250, 170, 66);
-    border-radius: 15px;
-    box-shadow: 3px 8px 10px black;
+#counter {
+  display: float;
+  text-align: center;
+  margin: auto;
+  background-color: rgb(250, 170, 66);
+  border-radius: 15px;
+  box-shadow: 3px 8px 10px black;
+  max-width: 400px;
 }
 
-.inputContainer {
-    display:grid;
-    margin: 0 auto;
-    background-color: rgb(132, 190, 240);
-    border-radius: 15px;
-    box-shadow: 3px 8px 10px black;
+.mainContainer {
+  display: flex;
+  text-align: center;
+  /* background-color: rgb(250, 170, 66);
+  border-radius: 15px;
+  box-shadow: 3px 8px 10px black; */
 }
 
-.inputContainer2 {
-  display:grid;
-  margin: 0 auto;
+.clickContainer {
+  display: grid;
+  margin: auto;
+  padding: 10px;
+  background-color: rgb(132, 190, 240);
+  border-radius: 15px;
+  box-shadow: 3px 8px 10px black;
+}
+
+.resetContainer {
+  display: grid;
+  margin: auto;
   background-color: rgb(132, 190, 240);
   border-radius: 15px;
   box-shadow: 3px 8px 10px black;
 }
 
 #autoClickerBtn {
-    background-color: rgb(132, 190, 240);
-    object-fit: contain;
-    box-shadow: 3px 8px 10px black;
-    border-radius: 15px;
+  background-color: rgb(132, 190, 240);
+  min-height: 50px;
+  box-shadow: 3px 8px 10px black;
+  border-radius: 15px;
 }
 
 #autoClickerBtn:hover {
-    background-color: #3e8e41;
-    cursor: pointer;
+  background-color: #3e8e41;
+  cursor: pointer;
 }
 
 #autoClickerBtn:active {
@@ -49,39 +79,48 @@ body {
 }
 
 #onClick {
-    background-image: url('./Images/donut.png');
-    background-color: rgba(240, 248, 255, 0);
-    height: 290px;
-    width: 290px;
-    border: none;
-    border-radius: 2000px;
-  }
+  background-image: url('./Images/donut.png');
+  background-color: rgba(240, 248, 255, 0);
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 300px;
+  border: none;
+  border-radius: 500px;
+}
 
-  #onClick:active{
-    background-image: url('./Images/autoclicker.png');
-    transform: translateY(4px);
-    cursor: pointer;
-  }
+#onClick:active {
+  transform: translateY(4px);
+  cursor: pointer;
+}
 
-  #onClick:hover{
-    background-image: url('./Images/donutclicked.png');
-    cursor: pointer;
-  }
+#onClick:hover {
+  background-image: url('./Images/donutclicked.png');
+  cursor: pointer;
+}
 
-  #reset {
-    background-color: rgb(132, 190, 240);
-    object-fit: contain;
-    box-shadow: 3px 8px 10px black;
-    border-radius: 15px;
+#reset {
+  background-color: rgb(132, 190, 240);
+  object-fit: contain;
+  box-shadow: 3px 8px 10px black;
+  border-radius: 15px;
 }
 
 #reset:hover {
-    background-color: #3e8e41;
-    cursor: pointer;
+  background-color: #3e8e41;
+  cursor: pointer;
 }
 
 #reset:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #2222225b;
   transform: translateY(4px);
+}
+
+
+.aboutSection {
+  display: float;
+  padding-top: 50px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
 }
