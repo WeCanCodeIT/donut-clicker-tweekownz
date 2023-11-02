@@ -4,20 +4,21 @@ const donutBounce = document.getElementById('onClick')
 const autoClickBtn = document.getElementById('autoClickerBtn')
 const autoClickPrice = document.getElementById('autoClickerPrice')
 const boughtAutoClicker = document.getElementById('numberofAutoClickers')
+const resetBtn = document.getElementById('reset')
 
 let startCount = 0;
 let autoClicker = 0;
-let click = 10;
+let click = 100;
 let autoClickerPrice = 100
 let boughtAutoClickers = 0 
-
-function autoCount(){
-    counter.innerText = startCount;
-}
 
 setInterval(function (){
     autoCount()
     startCount += autoClicker}, 1000)
+
+function autoCount(){
+    counter.innerText = `Donuts Made: ${startCount}`
+}
 
 function addClick(){
     startCount += click 
@@ -35,19 +36,16 @@ function buyAuto(){
     }
 }
 
+function resetGame(){
+    startCount = 0
+    autoClicker = 0
+    click = 1
+    autoClickerPrice = 100
+    boughtAutoClickers = 0 
+    autoClickPrice.innerHTML = `Auto Clicker Price: ${autoClickerPrice}`
+    boughtAutoClicker.innerHTML = `Auto Clickers Bought: ${boughtAutoClickers}`
+}
+
 leftClick.addEventListener('click', addClick);
 autoClickBtn.addEventListener('click', buyAuto);
-
-
-
-
-
-// if (x > 50) {
-//     /* do something */
-//   } else if (x > 5) {
-//     /* do something */
-//   } else {
-//     /* do something */
-//   }
-
-
+resetBtn.addEventListener('click', resetGame)
