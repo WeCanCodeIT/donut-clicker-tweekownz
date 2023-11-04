@@ -10,38 +10,39 @@ let startCount = 0;
 let autoClicker = 0;
 let click = 100;
 let autoClickerPrice = 100
-let boughtAutoClickers = 0 
+let boughtAutoClickers = 0
 
-setInterval(function (){
+setInterval(function () {
     autoCount()
-    startCount += autoClicker}, 1000)
+    startCount += autoClicker
+}, 1000)
 
-function autoCount(){
+function autoCount() {
     counter.innerText = `Donuts Made: ${startCount}`
 }
 
-function addClick(){
-    startCount += click 
+function addClick() {
+    startCount += click
 }
 
-function buyAuto(){
-    if (startCount >= autoClickerPrice){
-        autoClicker ++
+function buyAuto() {
+    if (startCount >= autoClickerPrice) {
+        autoClicker++
         startCount -= autoClickerPrice
         autoClickerPrice = Math.round(autoClickerPrice * 1.1)
-        boughtAutoClickers ++
+        boughtAutoClickers++
         counter.innerHTML = startCount
         autoClickPrice.innerHTML = `Auto Clicker Price: ${autoClickerPrice}`
         boughtAutoClicker.innerHTML = `Auto Clickers Bought: ${boughtAutoClickers}`
     }
 }
 
-function resetGame(){
+function resetGame() {
     startCount = 0
     autoClicker = 0
     click = 1
     autoClickerPrice = 100
-    boughtAutoClickers = 0 
+    boughtAutoClickers = 0
     autoClickPrice.innerHTML = `Auto Clicker Price: ${autoClickerPrice}`
     boughtAutoClicker.innerHTML = `Auto Clickers Bought: ${boughtAutoClickers}`
 }
